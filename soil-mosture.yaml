@@ -1,0 +1,15 @@
+# Enable Home Assistant API
+api:
+
+ota:
+
+sensor:
+  - platform: adc
+    pin: A0
+    filters:
+      - calibrate_linear:
+          - 0.36 -> 1.00
+          - 0.76 -> 0.00
+    name: "Plant 1 Soil Moisture Level"
+    update_interval: 30s
+    

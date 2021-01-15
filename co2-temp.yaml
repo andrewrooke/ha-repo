@@ -1,0 +1,22 @@
+
+i2c:
+
+sensor:
+  - platform: aht10
+    temperature:
+      name: "Lower Tent Temperature"
+    humidity:
+      name: "Lower Tent Humidity"
+    update_interval: 30s
+  - platform: ccs811
+    eco2:
+      name: "Lower Tent eCO2 Value"
+    tvoc:
+      name: "Lower Tent Total Volatile Organic Compound"
+    address: 0x5A
+    update_interval: 30s
+  - platform: bh1750
+    name: "Lower Tent Illuminance"
+    address: 0x23
+    measurement_time: 69
+    update_interval: 60s
